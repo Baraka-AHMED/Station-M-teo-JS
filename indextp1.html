@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <!DOCTYPE html>
+
+	<head>
+		<meta charset="utf-8">
+		<title> TPJS</title>
+	</head>
+    <body>
+        <h1 class="titre"> Ceci est un titre</h1>
+        <h1 class=titres>Deuxieme titre</h1>
+        <!--<script>
+            var toto = 1;
+            console.log(toto);
+
+            function fct(){
+                var toto = "ma valeur";
+            }
+            fct();
+            console.log(toto);
+
+            // S_test1 est de type undefined
+            var S_test1;
+
+            console.log("type de S_test1 :" + (typeof S_test1));
+            
+            //type string
+
+            var S_test2 = "mon texte";
+
+            console.log("type de S_test2 :" + (typeof S_test2));
+            
+            //type objet
+
+            var S_test3 = null;
+
+            console.log("type de S_test3 :" + (typeof S_test3));
+
+            //type entier
+
+            var S_test4;
+
+            console.log("type de S_test4 :" + (typeof S_test4));
+
+            var A_T = ["toto", "titi", "tata"];
+            for(let I_index = 0 ; I_index < A_T.length; I_index++){ //ici let, permet de restreindre la portée de la varible I_index au for 
+                console.log("Indice (" + I_index + ") :" + A_T[I_index]);
+                }
+
+            function maFonction(S_paramA, S_paramB){
+                var s = S_paramA + "-" + S_paramB;
+                var S_resultat = "";
+                for(let I_index in s){
+                    S_resultat += s[I_index] + " "; }
+                return S_resultat;
+            }
+            S_paramA = "toto";
+            S_paramB = "titi";
+            t = maFonction(S_paramA, S_paramB);
+            console.log(t);
+        </script>
+    -->
+    
+    <style>
+        .titre{
+            color: blue;
+        }
+        .blue {
+            border: 2px solid blue;
+        }
+        .green{
+            border: 2px solid blue;
+        }
+        .orange{
+            border: 2px solid blue;
+
+        }
+        .red {
+            border: 2px solid blue;
+
+        }
+    </style>
+    <section>
+        <p>Valeur à afficher <span id="spanValue"></span> </p>
+    </section>
+    <script>
+
+        function getRandomInt(min, max){
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        var A_array = [] ;
+        for (i =  0; i < 20; ++i){
+            let I_randomvalue = getRandomInt (-10, 40);
+            A_array.push(I_randomvalue);
+        }
+        console.log(A_array);
+    </script>
+
+    <script> function getRandomInt(min, max){Serveur
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + max; 
+      }
+      
+      var arr_tableau = [];
+      for (let i = 0; i < 20; i++){
+        let I_randomvalue = getRandomInt(-10,20);
+        arr_tableau.push(I_randomvalue);
+      }
+      
+      console.log(arr_tableau);
+      
+      var i = 0;
+      
+      var interval = setInterval(function(){
+        if (i < arr_tableau.length){
+          console.log(arr_tableau[i]);
+          
+          document.getElementById("spanValue").innerHTML = arr_tableau[i++];
+        }else{
+          clearInterval(interval);
+        }
+      }, 2000)
+       </script>
+    </body>
+
+    <!--Var = global ou local selon le contexte
+        let = variable local bloc couran
+        const = constante bloc courant, accesible en lecture seule
+    
+        S_ = string
+        I_ = Entier
+        B_ = Bool
+        A_ = Tablau
+        O_ = Objet 
+        typeof = type de la variable 
+    -->
+        
+
+</html>

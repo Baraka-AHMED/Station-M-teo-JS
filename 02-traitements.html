@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JavaScript - Cours / TD / TP</title>
+	</head>
+	<body>
+
+            <!--
+            Pour importer un script en référence externe, utiliser l'élément <script> comme suivant :
+            <script src="chemin/vers/myScript.js"></script>
+            -->
+
+            <h1>JavaScript - Quelques exemples de traitement</h1>
+
+            <p>Ouvrir la console du navigateur : raccourci F12 sur Chrome ou Mozilla</p>
+
+            <script>
+                console.log(42 + 42); // Addition
+
+                console.log("42" + 42); // Conversion implicite de 42 (number) en "42" (string) puis concaténation
+
+                console.log("toto" + 42); // Conversion implicite de 42 (number) en "42" (string) puis concaténation
+
+                console.log("42" - 42); // Conversion implicite de "42" (string) en 42 (number) puis soustracion
+
+                var date = new Date();
+                console.log(date.toLocaleString());
+
+                // ...
+
+                console.log(42 == 0 ? "42 vaut 0" : "42 ne vaut pas 0");
+
+                if(42 === "42") {
+                    console.log("c'est vrai");
+                } else {
+                    console.log("c'est faux");
+                }
+
+                var x = 0;
+
+                while(x < 5) {
+                    ++x;
+                    console.log(x);
+                }
+
+            </script>
+	</body>
+</html>

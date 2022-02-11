@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JavaScript - Cours / TD / TP</title>
+	</head>
+	<body>
+
+            <!--
+            Pour importer un script en référence externe, utiliser l'élément <script> comme suivant :
+            <script src="chemin/vers/myScript.js"></script>
+            -->
+
+            <h1>JavaScript - Les Variables et la notion de Portée</h1>
+
+            <p>Ouvrir la console du navigateur : raccourci F12 sur Chrome ou Mozilla</p>
+
+            <script>
+                /*
+                    # Indicateurs de portée #
+                    var : la variable est globale ou locale selon le contexte
+                    let : la variable est locale selon le bloc courant
+                    const : la variable est en lecture seule après déclaration / affectation de valeur selon le bloc courant
+                */
+
+                // /!\ fortement déconseillé même si cela fonctionne /!\
+                variable_sans_indicateur_de_portee = "toto"; // sans indicateur de portée, la variable est rattachée au contexte global (window)
+
+                var chaine_de_caracteres = "exemple de texte"; // window.chaine_de_caracteres
+
+                var tableau_de_nombres = [ // window.tableau_de_nombres
+                    42,
+                    13,
+                    99,
+                    1024
+                ];
+                
+                var variable_undefined; // window.une_variable_undefined, la variable de ne vaut pas null et undefined est un type
+
+                console.log(typeof variable_undefined); // typeof pour connaître le type (la nature) d'une variable
+
+                /*
+                    typeof est précis quand il s'agit d'un type primitif.
+                    Toutefois si la variable est de type object, il est possible
+                    de voir sa propriété __proto__ pour obtenir le nom exacte du type
+                */
+                var variable_object = document.getElementsByTagName("h1")[0];
+                console.log(typeof variable_object);
+                console.log(variable_object.__proto__);
+
+                for(let indice = 0; indice < tableau_de_nombres.length; indice++) {
+                    console.log(indice + " : " + tableau_de_nombres[indice]);
+                }
+                console.log(indice); // erreur ! la variable n'est pas définie dans le contexte actuel
+
+                for(var indice = 0; indice < tableau_de_nombres.length; indice++) {
+                    console.log(indice + " : " + tableau_de_nombres[indice]);
+                }
+                console.log(indice); // erreur ! la variable n'est pas définie dans le contexte actuel
+
+                var tableau_associatif = {
+                    cle_un : 42,
+                    cle_deux : 55
+                };
+                console.log(tableau_associatif.cle_un);
+                console.log(tableau_associatif.cle_deux);
+
+            </script>
+	</body>
+</html>

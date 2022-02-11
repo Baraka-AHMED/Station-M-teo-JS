@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <!DOCTYPE html>
+
+	<head>
+		<meta charset="utf-8">
+		<title> TPJS</title>
+	</head>
+    <body>
+       
+    </body>
+        <script>
+            /* Création d’une expression régulière depuis la forme littérale. On utilise le séparateur /.
+            Recherche la chaine “test “ de manière non case sensitive.*/
+            
+            //var O_pattern = /test/i ;
+            // Création de la même expression depuis la classe.var 
+            //O_pattern = new Regexp("test", "i");
+
+            //var S_maChaine = "J’aime Les Fruits";
+            //var O_pattern = /[^a]/m ;
+            /* if(O_pattern.test(S_maChaine)){
+                console.log("ma chaine contient bien le mot : fruit") ;}
+            else
+            console.log("ma chaine ne le contient pas");*/
+            // Constructeur d'objetfunction 
+            
+            function C_cstrObjet(paramAttribut1, paramAttribut2){    
+                this.attribut1 = paramAttribut1;    
+                this.attribut2 = paramAttribut2;    
+                this.maMethode = function(){      
+                    console.log('Je suis la méthode affichant les deux attributs de mon objet : ' + this.attribut1 +' '+this.attribut2 );    
+                }
+            }
+                    var O_monObjet = new C_cstrObjet("param 1","param 2");
+                    console.log(O_monObjet);
+
+            
+            var O_monObjet = new C_cstrObjet("param 1","param 2");
+            // Prototype de notre objet initial
+            console.log(Object.getPrototypeOf(O_monObjet));
+            // Prototype du prototype ?
+            var O_proto = Object.getPrototypeOf(O_monObjet);console.log(Object.getPrototypeOf(O_proto));
+            // Prototype du prototype du Prototype ?
+            // Null
+            //le prototype n'a pas de prototype, nous avons remonté la chaîne.
+            var O_proto2 = Object.getPrototypeOf(O_proto);
+            console.log(Object.getPrototypeOf(O_proto2));
+
+
+        </script>
+        
+</body>
+</html>
